@@ -12,11 +12,16 @@ const forecast = (latitude, longitude, callback) => {
             callback(
               undefined,
               body.current.weather_descriptions +
-                " It is currently " +
+                ".  It is currently " +
                 body.current.temperature +
-                " degress out. There is a " +
+                " degress out . " +
+                "  it feels like " +
+                body.current.feelslike +
+                " degress out . There is a " +
                 body.current.precip +
-                "% chance of rain."
+                "% chance of rain and " +
+                " humidity is " +
+                body.current.humidity +"%."
             );
         }
     })
